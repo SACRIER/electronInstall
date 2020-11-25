@@ -44,13 +44,16 @@
                 <img src="images/Aplicacao.PNG" alt="Conteúdo do PackageJson"><br> 
 
                 Agora vamos empacotar e tornar a aplicação distribuível<br>
-                Utilizaremos o <a href="https://www.electronforge.io/">Electron Forge</a> para a distribuição<br>
+                Utilizaremos o <a href="https://github.com/electron/electron-packager">Electron Packager</a> para a distribuição<br>
                 1º Passo:<br>
-                    Devemos importar o Electron Forge dentro da pasta do projeto com o comando npx @electron-forge/cli import<br>
-                    <img src="images/IniciandoElectronForge.PNG" alt="Conteúdo do Electron Forge"><br> 
+                    Devemos instalar o Electron Packager dentro da pasta do projeto com o comando npm install -g electron-packager(recomendado)<br>
+                    <img src="images/InstallPackager.PNG" alt="Conteúdo do Electron Packager"><br> 
                 2º Passo:<br>
-                    Agora, para criarmos o nosso distribuível, devemos executar o comando npm run make:<br>
-                    
+                    Agora, para criarmos o nosso distribuível, devemos executar o comando electron-packager . "nome do app":<br>
+                    <img src="images/CriandoExe.PNG" alt="Conteúdo do Electron Exe"><br>
+                O resultado será este:<br>
+                    <img src="images/PastaEmpacotada.PNG" alt="Conteúdo da Pasta Empacotada"><br>
+
         </p>
     </div>
 </body>
