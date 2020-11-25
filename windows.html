@@ -13,11 +13,44 @@
     </div>
     <div class="passos">
         <p>
-            1º Passo:
-                Acesse o site: electron.org <br>
-                <img src="Capturar.PNG" alt="Página do site"><br> 
-            2º Passo:
-                Abra o seu terminal <br>
+            <strong>Pré-requisitos:</strong> 
+                É preciso ter o <a href="https://nodejs.org/en/download/">NodeJS</a> instalado, é recomendado a versão LTS <br>
+                para ver se o NodeJS foi instalado corretamente, utilize os comandos: node -v e npm -v no seu terminal<br>
+                <img src="images/NodeJS.PNG" alt="Comandos"><br> 
+            <strong>Estrutura</strong><br>
+                O desenvolvimento de um aplicativo em Electron é baseado em um aplicativo em NodeJS, logo como padrão, será necessário<br>
+                um arquivo package.json. Segue a estrutura base inicial:<br>
+                <img src="images/Estrutura.PNG" alt="Estrutura"><br>
+            Instalando o electron:<br>
+                1º Passo:<br>
+                    Crie uma pasta para o seu projeto no local de sua preferência e instale o electron lá:<br>
+                    <img src="images/CriandoPasta.PNG" alt="Criando Pasta"><br> 
+                2º Passo:<br>
+                    Ainda no terminal, dentro da pasta do seu projeto execute o comando npm init -y <br>
+                    <img src="images/Init.PNG" alt="Comando Init"><br> 
+                3º Passo:<br>
+                    Por fim, execute o comando npm i --save-dev electron<br>
+                    <img src="images/ElectronCreate.PNG" alt="Criando as dependências e aplicação"><br> 
+            Criando os scripts nos arquivos:<br>
+                Começando pelo nosso script principal main.js, é ele quem executará o aplicativo e será responsável pelo seu ciclo de vida<br>
+                <img src="images/MainJS.PNG" alt="Conteúdo do MainJS"><br> 
+                Agora a adição do conteúdo no arquivo index.html, essa é a página que será exibida quando o aplicativo for iniciado<br>
+                <img src="images/IndexHTML.PNG" alt="Conteúdo do IndexHTML"><br> 
+                Por fim, será necessário modificar o conteúdo do arquivo package.json. Ele ficará desta forma:<br>
+                <img src="images/PackageJson.PNG" alt="Conteúdo do PackageJson"><br> 
+                A configuração terminou, agora basta executarmos o comando npm start dentro da pasta do projeto e ele será executado<br>
+                <img src="images/NpmStart.PNG" alt="Comando NpmStart"><br> 
+                Sua aplicação deverá aparecer da seguinte maneira:<br>
+                <img src="images/Aplicacao.PNG" alt="Conteúdo do PackageJson"><br> 
+
+                Agora vamos empacotar e tornar a aplicação distribuível<br>
+                Utilizaremos o <a href="https://www.electronforge.io/">Electron Forge</a> para a distribuição<br>
+                1º Passo:<br>
+                    Devemos importar o Electron Forge dentro da pasta do projeto com o comando npx @electron-forge/cli import<br>
+                    <img src="images/IniciandoElectronForge.PNG" alt="Conteúdo do Electron Forge"><br> 
+                2º Passo:<br>
+                    Agora, para criarmos o nosso distribuível, devemos executar o comando npm run make:<br>
+                    
         </p>
     </div>
 </body>
