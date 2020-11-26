@@ -15,7 +15,7 @@
         <p>
             <strong>Pré-requisitos:</strong> 
                 É preciso ter o <a href="https://nodejs.org/en/download/">NodeJS</a> instalado, é recomendado a versão LTS <br>
-                para ver se o NodeJS foi instalado corretamente, utilize os comandos: node -v e npm -v no seu terminal<br>
+                Para ver se o NodeJS foi instalado corretamente, utilize os comandos: node -v e npm -v no seu terminal<br>
                 <img src="images/NodeJS.PNG" alt="Comandos"><br> 
             <strong>Estrutura</strong><br>
                 O desenvolvimento de um aplicativo em Electron é baseado em um aplicativo em NodeJS, logo como padrão, será necessário<br>
@@ -32,9 +32,9 @@
                     Por fim, execute o comando npm i --save-dev electron<br>
                     <img src="images/ElectronCreate.PNG" alt="Criando as dependências e aplicação"><br> 
             Criando os scripts nos arquivos:<br>
-                Começando pelo nosso script principal main.js, é ele quem executará o aplicativo e será responsável pelo seu ciclo de vida<br>
+                Começando pelo nosso script principal main.js, ele será responsável por executar o aplicativo e cuidar de seu ciclo de vida<br>
                 <img src="images/MainJS.PNG" alt="Conteúdo do MainJS"><br> 
-                Agora a adição do conteúdo no arquivo index.html, essa é a página que será exibida quando o aplicativo for iniciado<br>
+                Agora, a adição do conteúdo no arquivo index.html, essa é a página que será exibida quando o aplicativo for iniciado<br>
                 <img src="images/IndexHTML.PNG" alt="Conteúdo do IndexHTML"><br> 
                 Por fim, será necessário modificar o conteúdo do arquivo package.json. Ele ficará desta forma:<br>
                 <img src="images/PackageJson.PNG" alt="Conteúdo do PackageJson"><br> 
@@ -49,7 +49,7 @@
                     Devemos instalar o Electron Packager dentro da pasta do projeto com o comando npm install -g electron-packager(recomendado)<br>
                     <img src="images/InstallPackager.PNG" alt="Conteúdo do Electron Packager"><br> 
                 2º Passo:<br>
-                    Primeiramente devemos executar o comando npm install electron:<br>
+                    Devemos executar o comando npm install electron:<br>
                     <img src="images/InstalandoElectron.PNG" alt="Conteúdo da Instalação"><br> 
                     Agora, para criarmos o nosso distribuível, devemos executar o comando electron-packager . "nome do app":<br>
                     <img src="images/CriandoExe.PNG" alt="Conteúdo do Electron Exe"><br>
