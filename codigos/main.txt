@@ -1,5 +1,6 @@
+//importando os modulos app e browserwindow do pacote electron
 const { app, BrowserWindow } = require('electron')
-
+//criando a função createWindow para a criação da janela web
 function createWindow () {
   const win = new BrowserWindow({
     width: 800,
@@ -8,19 +9,21 @@ function createWindow () {
       nodeIntegration: true
     }
   })
-
+//criando o render process, carregando o index.html em uma janela do navegador
   win.loadFile('index.html')
+//abrindo o DevTools do navegador(F12) assim que o aplicativo iniciar
   win.webContents.openDevTools()
 }
-
+//executa a função createWindow logo que o programa inicia, essa linha será executa primeiro que todas as outras
 app.whenReady().then(createWindow)
 
+//listener para eventos, caso todas as janelas estiverem fechadas e o sistema operacional nao for darwin, ela vai encerrar o programa
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit()
   }
 })
-
+//listener para eventos, aqui sera ouvido se existe alguma janela criada ou ativa no aplicativo, caso nao tenha, criará uma caso nao tenha
 app.on('activate', () => {
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow()
